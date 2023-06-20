@@ -19,6 +19,7 @@ var contador = 0;
 
 p.textContent = 0;
 p2.textContent = 0;
+var contadorInterval;
 
 btn_sumar.addEventListener('click', async () =>{
     // await setTimeout(() => {
@@ -71,7 +72,7 @@ btn_restar_contador.addEventListener('click', async () =>{
 
 btn_regresiva.addEventListener('click', async () =>{
     
-    var contadorInterval = setInterval(actualizarContador, 1000);
+    contadorInterval = setInterval(actualizarContador, 1000);
 })
 
 
@@ -83,6 +84,7 @@ function actualizarContador() {
   if (contador == 0) {
     alert('Fin')
     clearInterval(contadorInterval);
+    
   }
 }
 
